@@ -38,47 +38,10 @@
                 <nav class="bringer-nav">
                     <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
                         <li>
-                            <a href="#">Home</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="index.html">Home 01</a>
-                                </li>
-                                <li>
-                                    <a href="home02.html">Home 02</a>
-                                </li>
-                                <li>
-                                    <a href="home03.html">Home 03</a>
-                                </li>
-                                <li>
-                                    <a href="home04.html">Home 04</a>
-                                </li>
-                                <li>
-                                    <a href="home05.html">Home 05</a>
-                                </li>
-                                <li>
-                                    <a href="home06.html">Home 06</a>
-                                </li>
-                                <li>
-                                    <a href="home07.html">Home 07</a>
-                                </li>
-                                <li>
-                                    <a href="home08.html">Home 08</a>
-                                </li>
-                            </ul>
+                            <a href="{% url 'index'%}">Главное</a>
                         </li>
                         <li class="current-menu-parent">
-                            <a href="#">About Us</a>
-                            <ul class="sub-menu">
-                                <li class="current-menu-item">
-                                    <a href="about-us.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="about-me.html">About Me</a>
-                                </li>
-                                <li>
-                                    <a href="team-member.html">Team Member</a>
-                                </li>
-                            </ul>
+                            <a href="{% url 'about'%}">О нас</a>
                         </li>
                         <li>
                             <a href="#">Pages</a>

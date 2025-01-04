@@ -38,47 +38,10 @@
                 <nav class="bringer-nav">
                     <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
                         <li class="current-menu-parent">
-                            <a href="#">Home</a>
-                            <ul class="sub-menu">
-                                <li class="current-menu-item">
-                                    <a href="index.html">Home 01</a>
-                                </li>
-                                <li>
-                                    <a href="home02.html">Home 02</a>
-                                </li>
-                                <li>
-                                    <a href="home03.html">Home 03</a>
-                                </li>
-                                <li>
-                                    <a href="home04.html">Home 04</a>
-                                </li>
-                                <li>
-                                    <a href="home05.html">Home 05</a>
-                                </li>
-                                <li>
-                                    <a href="home06.html">Home 06</a>
-                                </li>
-                                <li>
-                                    <a href="home07.html">Home 07</a>
-                                </li>
-                                <li>
-                                    <a href="home08.html">Home 08</a>
-                                </li>
-                            </ul>
+                            <a href="{% url 'index'%}">Главное</a>
                         </li>
                         <li>
-                            <a href="#">About Us</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="about-us.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="about-me.html">About Me</a>
-                                </li>
-                                <li>
-                                    <a href="team-member.html">Team Member</a>
-                                </li>
-                            </ul>
+                            <a href="{% url 'index'%}">О нас</a>
                         </li>
                         <li>
                             <a href="#">Pages</a>
@@ -163,7 +126,7 @@
                     <div class="stg-row stg-bottom-gap-l stg-m-bottom-gap-l">
                         <div class="stg-col-9 stg-tp-col-8 stg-m-col-12">
                             <!-- Title -->
-                            <h1 class="bringer-page-title" data-split-appear="fade-up" data-split-unload="fade-up">Unleash Your Creativity And Bring IT to Reality</h1>
+                            <h1 class="bringer-page-title" data-split-appear="fade-up" data-split-unload="fade-up">{{index.title}}</h1>
                         </div>
                         <div class="stg-col-3 stg-tp-col-4 stg-m-col-12">
                             <!-- Social Proof -->
@@ -208,7 +171,7 @@
                             </div><!-- .bringer-counter -->
                         </div>
                         <div class="stg-col-6 stg-tp-col-6 stg-m-col-12 stg-m-top-gap" data-appear="fade-up" data-delay="400" data-unload="fade-up">
-                            <p class="bringer-large-text">We help creative agencies, designers, and other creative people showcase their work and connect with clients.</p>
+                            <p class="bringer-large-text">{{index.description}}</p>
                         </div>
                     </div><!-- .stg-row -->
                 </div><!-- .bringer-hero-block -->
