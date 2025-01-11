@@ -1,0 +1,72 @@
+<!-- Step 02 Row -->
+                <div class="stg-row stg-bottom-gap stg-valign-middle stg-tp-row-reverse stg-m-bottom-gap-l" data-unload="fade-right">
+                    <div class="stg-col-3 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-left">
+                        <div class="bringer-parallax-media">
+                            <img class="bringer-lazy" src="img/null.png" data-src="img/home/step02.jpg" alt="Step 02" width="960" height="960">
+                        </div>
+                    </div>
+                    <div class="stg-col-6 stg-tp-col-6" data-appear="fade-left" data-delay="100">
+                        <span class="bringer-label">Шаг 02</span>
+                        <h4>Индивидуальный шедевр</h4>
+                        <p><span class="bringer-highlight">Создание фирменного стиля:</span> Мы создадим визуальную идентичность, которая будет отражать вашу сущность, от дизайна логотипа до цветовой палитры и типографики. Здесь мы создаем целостный внешний вид, который находит отклик у вашей аудитории.</p>
+                        <p><span class="bringer-highlight">  разработка контента:</span> Мы сочиним увлекательные истории и создадим послания, которые затрагивают сердца и умы ваших клиентов. Здесь мы создаем контент, который объединяет, вовлекает и вдохновляет на действия.</p>
+                    </div>
+                    <div class="stg-col-3"><!-- Empty Column --></div>
+                </div>
+                <!-- Step 03 Row -->
+                <div class="stg-row stg-bottom-gap stg-valign-middle stg-m-bottom-gap-l" data-unload="fade-left">
+                    <div class="stg-col-3 stg-offset-3 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-right">
+                        <div class="bringer-parallax-media">
+                            <img class="bringer-lazy" src="img/null.png" data-src="img/home/step03.jpg" alt="Step 03" width="960" height="960">
+                        </div>
+                    </div>
+                    <div class="stg-col-6 stg-tp-col-6" data-appear="fade-right" data-delay="100">
+                        <span class="bringer-label">Шаг 03</span>
+                        <h4>Безупречное исполнение</h4>
+                        <p><span class="bringer-highlight">Экспертное сотрудничество:</span> Мы будем работать рука об руку с вами, гарантируя, что каждая деталь соответствует вашему видению и превосходит ожидания. Здесь мы объединяем наш разнообразный опыт, чтобы создать что-то действительно выдающееся..</p>
+                        <p><span class="bringer-highlight">Тщательное производство:</span> Мы с точностью решим технические аспекты: от бесшовной веб-разработки до высококачественной графической продукции. Именно здесь мы превращаем концепции в осязаемую реальность, идеальную до пикселя и готовую сиять.</p>
+                    </div>
+                </div>
+                <!-- Step 04 Row -->
+                <div class="stg-row stg-valign-middle stg-tp-row-reverse" data-unload="fade-right">
+                    <div class="stg-col-3 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-left">
+                        <div class="bringer-parallax-media">
+                            <img class="bringer-lazy" src="img/null.png" data-src="img/home/step04.jpg" alt="Step 04" width="960" height="960">
+                        </div>
+                    </div>
+                    <div class="stg-col-6 stg-tp-col-6" data-appear="fade-left" data-delay="100">
+                        <span class="bringer-label">Шаг 04</span>
+                        <h4>Запуск &amp; Вне</h4>
+                        <p><span class="bringer-highlight">Стратегический запуск:</span> Мы представим ваш бренд миру с помощью индивидуальной стратегии запуска, которая вызовет ажиотаж и повысит вовлеченность. Здесь мы создадим ажиотаж и заявим о вашем присутствии.</p>
+                        <p><span class="bringer-highlight">Ongoing Optimization:</span> Мы будем следить за вашим прогрессом, анализировать данные и вносить постоянные корректировки, чтобы ваш бренд оставался на шаг впереди. Именно здесь мы приветствуем рост и адаптацию.</p>
+                    </div>
+                    <div class="stg-col-3"><!-- Empty Column --></div>
+                </div>
+            </section>
+
+
+<!-- Step 01 Row --> 
+                <div class="stg-row stg-bottom-gap stg-valign-middle stg-m-bottom-gap-l" data-unload="fade-left">
+                    <div class="stg-col-3 stg-offset-3 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-right">
+                        <div class="bringer-parallax-media">
+                            <img class="bringer-lazy" src="img/null.png" data-src="img/home/step01.jpg" alt="Step 01" width="960" height="960">
+                        </div>
+                    </div>
+                    <div class="stg-col-6 stg-tp-col-6" data-appear="fade-right" data-delay="100">
+                        <span class="bringer-label">{{steps.num}}</span>
+                        <h4>Раскройте свое видение</h4>
+                        <p><span class="bringer-highlight">Глубокое погружение:</span> Мы погрузимся в ваш мир, изучая вашу уникальную историю, целевую аудиторию и стремления. Здесь мы раскрываем суть вашего бренда и раскрываем искру, которая отличает вас.</p>
+                        <p><span class="bringer-highlight">Стратегические исследования:</span> Мы проведем тщательное исследование, проанализируем ваших конкурентов и определим возможности для достижения успеха вашего бренда. Здесь мы намечаем местность и намечаем курс к вашим целям.</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+ <!-- Right Click Protection Block -->
+    <div class="bringer-rcp-wrap">
+        <div class="bringer-rcp-overlay"></div>
+        <div class="bringer-rcp-container">
+            <h2>На этой странице запрещено использовать контекстное меню.</h2>
+        </div>
+    </div>

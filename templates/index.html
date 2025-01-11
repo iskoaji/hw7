@@ -30,7 +30,7 @@
             <!-- Header Logo -->
             <div class="bringer-header-lp">
                 <a href="./" class="bringer-logo">
-                    <img src="img/logo.png" alt="bringer." width="88" height="24">
+                    <img src="{% static 'img/logo.png' %}" alt="bringer." width="88" height="24">
                 </a>
             </div>
             <!-- Main Menu -->
@@ -91,7 +91,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="contacts.html">Контакты</a>
+                            <a href="{% url 'contact'%}">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -132,9 +132,9 @@
                             <!-- Social Proof -->
                             <div class="bringer-hero-social-proof">
                                 <div data-stagger-appear="fade-up" data-stagger-delay="100" data-stagger-unload="fade-up">
-                                    <img src="img/home/social-proof01.jpg" alt="Client 01">
-                                    <img src="img/home/social-proof02.jpg" alt="Client 02">
-                                    <img src="img/home/social-proof03.jpg" alt="Client 03">
+                                    <img src="{% static 'img/home/social-proof01.jpg' %}" alt="Client 01">
+                                    <img src="{% static 'img/home/social-proof02.jpg' %}" alt="Client 02">
+                                    <img src="{% static 'img/home/social-proof03.jpg' %}" alt="Client 03">
                                     <a href="testimonials.html">24K+</a>
                                 </div>
                                 <p data-appear="fade-up" data-unload="fade-up" data-delay="200">Нам доверяют более 24 тысяч клиентов</p>
@@ -175,14 +175,15 @@
                         </div>
                     </div><!-- .stg-row -->
                 </div><!-- .bringer-hero-block -->
-            </section>
+            </section>  
 
             <!-- Section: Steps -->
             <section class="backlight-top" id="page01">
                 <div class="stg-bottom-gap-l">
                     <h2 data-appear="fade-up" data-unload="fade-up">4 шага к великолепию бренда</h2>
                 </div>
-                <!-- Step 01 Row -->
+                <!-- Step 01 Row --> 
+                {% for i in steps %}
                 <div class="stg-row stg-bottom-gap stg-valign-middle stg-m-bottom-gap-l" data-unload="fade-left">
                     <div class="stg-col-3 stg-offset-3 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-right">
                         <div class="bringer-parallax-media">
@@ -190,58 +191,31 @@
                         </div>
                     </div>
                     <div class="stg-col-6 stg-tp-col-6" data-appear="fade-right" data-delay="100">
-                        <span class="bringer-label">Шаг 01</span>
-                        <h4>Раскройте свое видение</h4>
-                        <p><span class="bringer-highlight">Глубокое погружение:</span> Мы погрузимся в ваш мир, изучая вашу уникальную историю, целевую аудиторию и стремления. Здесь мы раскрываем суть вашего бренда и раскрываем искру, которая отличает вас.</p>
-                        <p><span class="bringer-highlight">Стратегические исследования:</span> Мы проведем тщательное исследование, проанализируем ваших конкурентов и определим возможности для достижения успеха вашего бренда. Здесь мы намечаем местность и намечаем курс к вашим целям.</p>
+                        <span class="bringer-label">{{i.num}}</span>
+                        <h4>{{i.name_des}}</h4>
+                        <p><span class="bringer-highlight">{{i.title}}</span>{{i.description}}</p>
+                        <p><span class="bringer-highlight">{{i.title2}}</span>{{i.description2}}</p>
                     </div>
-                </div>
-                <!-- Step 02 Row -->
-                <div class="stg-row stg-bottom-gap stg-valign-middle stg-tp-row-reverse stg-m-bottom-gap-l" data-unload="fade-right">
-                    <div class="stg-col-3 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-left">
-                        <div class="bringer-parallax-media">
-                            <img class="bringer-lazy" src="img/null.png" data-src="img/home/step02.jpg" alt="Step 02" width="960" height="960">
-                        </div>
-                    </div>
-                    <div class="stg-col-6 stg-tp-col-6" data-appear="fade-left" data-delay="100">
-                        <span class="bringer-label">Шаг 02</span>
-                        <h4>Индивидуальный шедевр</h4>
-                        <p><span class="bringer-highlight">Создание фирменного стиля:</span> Мы создадим визуальную идентичность, которая будет отражать вашу сущность, от дизайна логотипа до цветовой палитры и типографики. Здесь мы создаем целостный внешний вид, который находит отклик у вашей аудитории.</p>
-                        <p><span class="bringer-highlight">Убедительная разработка контента:</span> Мы сочиним увлекательные истории и создадим послания, которые затрагивают сердца и умы ваших клиентов. Здесь мы создаем контент, который объединяет, вовлекает и вдохновляет на действия.</p>
-                    </div>
-                    <div class="stg-col-3"><!-- Empty Column --></div>
-                </div>
-                <!-- Step 03 Row -->
-                <div class="stg-row stg-bottom-gap stg-valign-middle stg-m-bottom-gap-l" data-unload="fade-left">
-                    <div class="stg-col-3 stg-offset-3 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-right">
-                        <div class="bringer-parallax-media">
-                            <img class="bringer-lazy" src="img/null.png" data-src="img/home/step03.jpg" alt="Step 03" width="960" height="960">
-                        </div>
-                    </div>
-                    <div class="stg-col-6 stg-tp-col-6" data-appear="fade-right" data-delay="100">
-                        <span class="bringer-label">Шаг 03</span>
-                        <h4>Безупречное исполнение</h4>
-                        <p><span class="bringer-highlight">Экспертное сотрудничество:</span> Мы будем работать рука об руку с вами, гарантируя, что каждая деталь соответствует вашему видению и превосходит ожидания. Здесь мы объединяем наш разнообразный опыт, чтобы создать что-то действительно выдающееся..</p>
-                        <p><span class="bringer-highlight">Тщательное производство:</span> Мы с точностью решим технические аспекты: от бесшовной веб-разработки до высококачественной графической продукции. Именно здесь мы превращаем концепции в осязаемую реальность, идеальную до пикселя и готовую сиять.</p>
-                    </div>
-                </div>
-                <!-- Step 04 Row -->
+                </div>  
+                {% endfor %}
+                {% for item in steps %}
                 <div class="stg-row stg-valign-middle stg-tp-row-reverse" data-unload="fade-right">
                     <div class="stg-col-3 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-left">
                         <div class="bringer-parallax-media">
                             <img class="bringer-lazy" src="img/null.png" data-src="img/home/step04.jpg" alt="Step 04" width="960" height="960">
                         </div>
-                    </div>
+                    </div>      
                     <div class="stg-col-6 stg-tp-col-6" data-appear="fade-left" data-delay="100">
-                        <span class="bringer-label">Шаг 04</span>
-                        <h4>Запуск &amp; Вне</h4>
-                        <p><span class="bringer-highlight">Стратегический запуск:</span> Мы представим ваш бренд миру с помощью индивидуальной стратегии запуска, которая вызовет ажиотаж и повысит вовлеченность. Здесь мы создадим ажиотаж и заявим о вашем присутствии.</p>
-                        <p><span class="bringer-highlight">Ongoing Optimization:</span> Мы будем следить за вашим прогрессом, анализировать данные и вносить постоянные корректировки, чтобы ваш бренд оставался на шаг впереди. Именно здесь мы приветствуем рост и адаптацию.</p>
+                        <span class="bringer-label">{{item.numl}}</span>
+                        <h4>{{item.name_desl}}</h4>
+                        <p><span class="bringer-highlight">{{item.titlel}}</span>{{item.descriptionl}}</p>
+                        <p><span class="bringer-highlight">{{item.title2l}}</span>{{item.description2l}}</p>
                     </div>
                     <div class="stg-col-3"><!-- Empty Column --></div>
                 </div>
+                {% endfor %}
             </section>
-
+            
             <!-- Section: About Us -->
             <section class="backlight-bottom divider-top">
                 <div class="stg-row stg-large-gap stg-valign-middle stg-tp-column-reverse">
@@ -296,7 +270,7 @@
                                 <img class="bringer-lazy" src="img/null.png" data-src="img/portfolio/portfolio02.jpg" alt="" width="1200" height="1200">
                             </div>
                             <div class="bringer-portfolio-card-footer">
-                                <div class="bringer-portfolio-card-title">
+                                   <div class="bringer-portfolio-card-title">
                                     <span class="bringer-meta">Реклама</span>
                                     <h6>Тесто для печенья</h6>
                                 </div>
@@ -368,12 +342,12 @@
                         <!-- Card Item 07 -->
                         <div class="bringer-block bringer-portfolio-card swiper-slide">
                             <div class="bringer-portfolio-card-image">
-                                <img class="bringer-lazy" src="img/null.png" data-src="img/portfolio/portfolio07.jpg" alt="" width="1200" height="1200">
+                                <img class="bringer-lazy" src="{% static 'img/null.png' %}" data-src="{% static 'img/portfolio/portfolio07.jpg' %}" alt="" width="1200" height="1200">
                             </div>
                             <div class="bringer-portfolio-card-footer">
                                 <div class="bringer-portfolio-card-title">
                                     <span class="bringer-meta">Брендинг</span>
-                                    <h6>Fashion Makeup</h6>
+                                    <h6>Модный Макияж</h6>
                                 </div>
                                 <span class="bringer-icon bringer-icon-explore"></span>
                             </div>
@@ -585,19 +559,13 @@
             <!-- Footer Copyright Line -->
             <div class="bringer-footer-line stg-container">
                 <div class="align-center">
-                    Copyright &copy; 2024. All Rights Reserved.
+                    Авторское право &copy; 2025. Все права защищены.
                 </div>
             </div><!-- bringer-footer-line -->
         </footer>
 	</main>
 
-    <!-- Right Click Protection Block -->
-    <div class="bringer-rcp-wrap">
-        <div class="bringer-rcp-overlay"></div>
-        <div class="bringer-rcp-container">
-            <h2>На этой странице запрещено использовать контекстное меню.</h2>
-        </div>
-    </div>
+   
 
     <!-- Dynamic Backlight -->
     <div class="bringer-backlight"></div>

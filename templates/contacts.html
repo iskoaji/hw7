@@ -1,3 +1,4 @@
+{% load static %} #мы с помошью этого импортируем статики 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +11,13 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
     <!-- Config -->
-    <link type="text/css" rel="stylesheet" href="css/config.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/config.css' %}">
     <!-- Libraries -->
-    <link type="text/css" rel="stylesheet" href="css/libs.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/libs.css' %}">
     <!-- Template Styles -->
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Responsive -->
-    <link type="text/css" rel="stylesheet" href="css/responsive.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/responsive.css' %}">
 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.png" sizes="32x32">
@@ -37,47 +38,10 @@
                 <nav class="bringer-nav">
                     <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
                         <li>
-                            <a href="#">Home</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="index.html">Home 01</a>
-                                </li>
-                                <li>
-                                    <a href="home02.html">Home 02</a>
-                                </li>
-                                <li>
-                                    <a href="home03.html">Home 03</a>
-                                </li>
-                                <li>
-                                    <a href="home04.html">Home 04</a>
-                                </li>
-                                <li>
-                                    <a href="home05.html">Home 05</a>
-                                </li>
-                                <li>
-                                    <a href="home06.html">Home 06</a>
-                                </li>
-                                <li>
-                                    <a href="home07.html">Home 07</a>
-                                </li>
-                                <li>
-                                    <a href="home08.html">Home 08</a>
-                                </li>
-                            </ul>
+                            <a href="{% url 'index' %}">Главное</a>
                         </li>
                         <li>
-                            <a href="#">About Us</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="about-us.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="about-me.html">About Me</a>
-                                </li>
-                                <li>
-                                    <a href="team-member.html">Team Member</a>
-                                </li>
-                            </ul>
+                            <a href="{% url 'about' %}">О нас</a>
                         </li>
                         <li>
                             <a href="#">Pages</a>
@@ -127,7 +91,7 @@
                             </ul>
                         </li>
                         <li class="current-menu-item">
-                            <a href="contacts.html">Contacts</a>
+                            <a href="{% url 'contact'%}">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -159,8 +123,8 @@
             <section class="backlight-bottom">
                 <div class="stg-row stg-bottom-gap-l">
                     <div class="stg-col-6 stg-offset-3 align-center">
-                        <h1 class="bringer-page-title" data-appear="fade-up" data-unload="fade-up">Get in Touch</h1>
-                        <p class="bringer-large-text" data-appear="fade-up" data-delay="100" data-unload="fade-up">We help businesses of all sizes achieve their goals. We believe every brand, big or small, deserves to shine.</p>
+                        <h1 class="bringer-page-title" data-appear="fade-up" data-unload="fade-up">{{contact.title}}</h1>
+                        <p class="bringer-large-text" data-appear="fade-up" data-delay="100" data-unload="fade-up">{{contact.description}}</p>
                     </div>
                 </div>
                 <div class="bringer-parallax-media" data-parallax-speed="20" data-appear="fade-up" data-delay="200" data-unload="fade-up">
@@ -213,10 +177,10 @@
                     <div class="stg-col-4 stg-tp-col-6 stg-tp-bottom-gap">
                         <!-- Phone -->
                         <div class="bringer-block stg-aspect-square stg-vertical-space-between">
-                            <a href="tel:+12345556789" class="bringer-grid-item-link"></a>
+                            <a href="tel:{{contact.phone}}" class="bringer-grid-item-link"></a>
                             <div>
-                                <h5>Phone<span class="bringer-accent">.</span></h5>
-                                <h6>+1 (234) 555-67-89</h6>
+                                <h5>Номер телефона<span class="bringer-accent">.</span></h5>
+                                <h6>{{contact.phone}}</h6>
                             </div>
                             <p>Give us a call and chat directly with our friendly team. We're always happy to answer any questions.</p>
                         </div>
@@ -224,10 +188,10 @@
                     <div class="stg-col-4 stg-tp-col-6 stg-tp-bottom-gap">
                         <!-- Email -->
                         <div class="bringer-block stg-aspect-square stg-vertical-space-between">
-                            <a href="mailto:bringer@example.com" class="bringer-grid-item-link"></a>
+                            <a href="mailto:{{contact.email}}" class="bringer-grid-item-link"></a>
                             <div>
                                 <h5>Email<span class="bringer-accent">.</span></h5>
-                                <h6>bringer@example.com</h6>
+                                <h6>{{contact.email}}</h6>
                             </div>
                             <p>Send us a detailed message. We'll get back to you as soon as possible to discuss your creative project further.</p>
                         </div>
@@ -236,30 +200,20 @@
                         <!-- Social Media -->
                         <div class="bringer-block stg-aspect-square stg-tp-aspect-rectangle stg-vertical-space-between">
                             <div>
-                                <h5>Social Media<span class="bringer-accent">.</span></h5>
+                                <h5>Социальные сети<span class="bringer-accent">.</span></h5>
                                 <ul class="bringer-socials-list stg-small-gap" data-stagger-appear="fade-up" data-stagger-delay="75">
                                     <li>
-                                        <a href="#" target="_blank" class="bringer-socials-facebook">
+                                        <a href="{{contact.tt}}" target="_blank" class="bringer-socials-facebook">
                                             <i></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank" class="bringer-socials-instagram">
+                                        <a href="{{contact.ig}}" target="_blank" class="bringer-socials-instagram">
                                             <i></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank" class="bringer-socials-x">
-                                            <i></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" class="bringer-socials-tiktok">
-                                            <i></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank" class="bringer-socials-patreon">
+                                        <a href="{{contact.tt}}" target="_blank" class="bringer-socials-tiktok">
                                             <i></i>
                                         </a>
                                     </li>
@@ -287,16 +241,16 @@
                     <div class="stg-col-4 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-right" data-delay="100" data-unload="fade-left">
                         <!-- Phone -->
                         <div class="bringer-block stg-aspect-square stg-vertical-space-between">
-                            <a href="https://maps.app.goo.gl/WbTG6EKuF9dE1Xuy8" class="bringer-grid-item-link"></a>
+                            <a href="https://maps.app.goo.gl/ojuMvqwMyY7eSmaT8" class="bringer-grid-item-link"></a>
                             <div>
-                                <h5>Address<span class="bringer-accent">.</span></h5>
-                                <h6>1250 Welton St, Denver,<br>CO 80204</h6>
+                                <h5>Адрес<span class="bringer-accent">.</span></h5>
+                                <h6>{{contact.address}}</h6>
                             </div>
                             <p>Drop by our vibrant studio. We'd love to welcome you and share our creative vibe. Let's fuel your vision!</p>
                         </div>
                     </div>
                     <div class="stg-col-8 stg-tp-col-6" data-appear="fade-left" data-delay="200" data-unload="fade-right">
-                        <iframe class="bringer-google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.943072055294!2d-104.99509669999999!3d39.7409296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78d2480272f1%3A0x1b2acd6e38844602!2s1250%20Welton%20St%2C%20Denver%2C%20CO%2080204%2C%20USA!5e0!3m2!1sen!2sua!4v1705074190340!5m2!1sen!2sua" width="790" height="379" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d814.7583468897196!2d72.80275749268253!3d40.519667286195855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bdaf51e4e11011%3A0x2dd3bbd34364f3e1!2zSVQt0LrRg9GA0YHRiyDQmtGD0YDRgdGLINC_0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNGPINCe0YggR2Vla3M!5e0!3m2!1sen!2sua!4v1736342643795!5m2!1sen!2sua" width="790" height="379" style="border:0;" allowfullscreen="" loading="lazy" ="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </section>
@@ -306,7 +260,8 @@
                 <div class="stg-row stg-valign-middle stg-cta-with-image stg-tp-column-reverse">
                     <div class="stg-col-5" data-unload="fade-left">
                         <div class="bringer-offset-image" data-bg-src="img/cta/contact-section-bg.jpg" data-appear="fade-up" data-threshold="0.25"></div>
-                        <form action="mail.php" method="post" class="bringer-contact-form bringer-block" data-fill-error="Please, fill out the contact form." data-appear="fade-right" data-threshold="0.25">
+                        <form method="post" class="bringer-contact-form bringer-block" data-fill-error="Please, fill out the contact form." data-appear="fade-right" data-threshold="0.25">
+                            {% csrf_token %}
                             <div class="bringer-form-content">
                                 <!-- Field: Name -->
                                 <label for="name">Your Name</label>
@@ -472,11 +427,11 @@
     <div class="bringer-backlight"></div>
 
     <!-- JS Scripts -->
-    <script src="js/lib/jquery.min.js"></script>
-    <script src="js/lib/libs.js"></script>
-    <script src="js/contact_form.js"></script>
-    <script src="js/st-core.js"></script>
-    <script src="js/classes.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/lib/jquery.min.js' %}"></script>
+    <script src="{% static 'js/lib/libs.js' %}"></script>
+    <script src="{% static 'js/contact_form.js' %}"></script>
+    <script src="{% static 'js/st-core.js' %}"></script>
+    <script src="{% static 'js/classes.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
