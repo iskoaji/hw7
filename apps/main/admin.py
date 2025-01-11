@@ -1,9 +1,10 @@
 from django.contrib import admin
-from apps.main.models import Index, Steps, Contact
+from apps.main.models import Index, Steps, Contact, Faq
 from django.utils.html import format_html
 # Register your models here.
 
 admin.site.register(Index)
+admin.site.register(Faq)
 
 @admin.register(Steps)
 class StepsAdmin(admin.ModelAdmin):

@@ -70,3 +70,29 @@
             <h2>На этой странице запрещено использовать контекстное меню.</h2>
         </div>
     </div>
+
+
+
+    <!-- Right Click Protection Block -->
+    <div class="bringer-rcp-wrap">
+        <div class="bringer-rcp-overlay"></div>
+        <div class="bringer-rcp-container">
+            <h2>The context menu is not allowed on this page.</h2>
+        </div>
+    </div>
+
+
+            <<div class="bringer-faq-list">
+                    <!-- FAQ Item 01 -->
+                    <div class="bringer-toggles-item bringer-block" data-appear="fade-up" data-unload="fade-up">
+                        <div class="bringer-toggles-item--title">
+                            <span class="bringer-label">General</span>
+                            <h4>
+                                <sup>01.</sup>
+                                What exactly does Bringer do?
+                            </h4>
+                        </div>
+                        <div class="bringer-toggles-item--content">
+                            <p>We're your brand's fairy godmothers (and fathers!) of transformation. We don't just design logos and write taglines; we craft your entire brand identity, from story to visuals. Think of us as storytellers, magicians, and digital alchemists, ready to ignite your brand and set it ablaze with passion and impact.</p>
+                        </div>
+                    </div>
