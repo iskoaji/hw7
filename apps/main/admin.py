@@ -6,6 +6,8 @@ from django.utils.html import format_html
 admin.site.register(Index)
 admin.site.register(Faq)
 
+
+
 @admin.register(Steps)
 class StepsAdmin(admin.ModelAdmin):
     

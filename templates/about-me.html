@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +11,13 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
     <!-- Config -->
-    <link type="text/css" rel="stylesheet" href="css/config.css">
+    <link type="text/css" rel="stylesheet" href='{% static "css/config.css" %}'>
     <!-- Libraries -->
-    <link type="text/css" rel="stylesheet" href="css/libs.css">
+    <link type="text/css" rel="stylesheet" href='{% static "css/libs.css" %}'>
     <!-- Template Styles -->
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href='{% static "css/style.css" %}'>
     <!-- Responsive -->
-    <link type="text/css" rel="stylesheet" href="css/responsive.css">
+    <link type="text/css" rel="stylesheet" href='{% static "css/responsive.css" %}'>
 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.png" sizes="32x32">
@@ -37,7 +38,7 @@
                 <nav class="bringer-nav">
                     <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
                         <li>
-                            <a href="#">Home</a>
+                            <a href="{% url 'index'%}">Home</a>
                             <ul class="sub-menu">
                                 <li>
                                     <a href="index.html">Home 01</a>
@@ -69,7 +70,7 @@
                             <a href="#">About Us</a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="about-us.html">About Us</a>
+                                    <ahref="{% url 'about' %}">About Us</a>
                                 </li>
                                 <li class="current-menu-item">
                                     <a href="about-me.html">About Me</a>
@@ -127,7 +128,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="contacts.html">Contacts</a>
+                            <a  href="{% url 'contact'%}">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -507,11 +508,11 @@
     <div class="bringer-backlight"></div>
 
     <!-- JS Scripts -->
-    <script src="js/lib/jquery.min.js"></script>
-    <script src="js/lib/libs.js"></script>
-    <script src="js/contact_form.js"></script>
-    <script src="js/st-core.js"></script>
-    <script src="js/classes.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/lib/jquery.min.js' %}"></script>
+    <script src="{% static 'js/lib/libs.js' %}"></script>
+    <script src="{% static 'js/contact_form.js' %}"></script>
+    <script src="{% static 'js/st-core.js' %}"></script>
+    <script src="{% static 'js/classes.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

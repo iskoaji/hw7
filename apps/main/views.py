@@ -11,6 +11,9 @@ def about(request):
     index = Index.objects.latest('id')
     return render(request, 'about-us.html', locals())
 
+def aboutme(request): 
+    return render(request, 'about-me.html', locals())
+
 def faq(request):
     faqq = Faq.objects.all()
     return render(request, 'faq.html', locals())
